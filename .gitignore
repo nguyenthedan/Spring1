@@ -1,2 +1,7 @@
 target/
-/.setting/
+.settings/
+.project
+.classpath
+.metadata
+bin/
+tmp/
