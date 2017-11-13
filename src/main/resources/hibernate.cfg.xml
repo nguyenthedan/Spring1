@@ -5,12 +5,17 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="hibernate.archive.autodetection">class,hbm</property>
-		<property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+		<!-- database connection properties -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username">admin</property>
+		<property name="hibernate.connection.password">anhdax</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/startx?serverTimezone=Europe/Brussels</property>
+		
+		<!-- show mysql queries output in console -->
 		<property name="hibernate.show_sql">true</property>
-		<property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
-		<property name="hibernate.connection.username">sa</property>
-		<property name="hibernate.connection.password"></property>
-		<property name="hibernate.connection.url">jdbc:hsqldb:mem:howtodoinjava</property>
+		
+		<!-- manage automatic database creation -->
 		<property name="hibernate.hbm2ddl.auto">create</property>
 		
 		<property name="hibernate.c3p0.min_size">5</property>
